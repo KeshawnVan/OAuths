@@ -84,7 +84,7 @@ public class AuthController {
         String verifyCode = verifyCodeManager.generateVerifyCode(app, authResponse.getOpenId());
 
         // 构建重定向url
-        String redirectUrl = app.getRedirectUrl() + "?" + "verifyCode" + ":" + verifyCode;
+        String redirectUrl = app.getRedirectUrl() + "?" + "verifyCode" + "=" + verifyCode;
 
         servletResponse.sendRedirect(redirectUrl);
 

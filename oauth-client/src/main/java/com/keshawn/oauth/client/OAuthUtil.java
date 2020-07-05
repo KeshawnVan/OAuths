@@ -7,7 +7,7 @@ public final class OAuthUtil {
 
     public static String buildRedirectUrl(AppProperties appProperties) {
         // check appProperties
-        String redirectUrl = appProperties.getAuthUrl() + "?" + OAuthConstant.APP_CODE + ":" + appProperties.getCode();
+        String redirectUrl = appProperties.getAuthUrl() + "?" + OAuthConstant.APP_CODE + "=" + appProperties.getCode();
         return "redirect:" + redirectUrl;
     }
 }
